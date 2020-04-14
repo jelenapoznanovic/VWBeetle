@@ -27,6 +27,10 @@ import purgecss from "gulp-purgecss";
 import gzip from "gulp-gzip";
 import RevAll from "gulp-rev-all";
 import RevDelete from "gulp-rev-delete-original";
+import svgmin from "gulp-svgmin";
+import svgSymbols from "gulp-svg-symbols";
+import rename from "gulp-rename";
+import rimraf from "gulp-rimraf";
 const critical = require("critical").stream;
 
 // Check for "--production" flag
@@ -118,6 +122,17 @@ function revFiles() {
     .pipe(RevDelete())
     .pipe(gulp.dest(PATHS.docs));
 }
+
+function svgSprite() {
+  return gulp.src('src/assets/icons/*.svg')
+    .pipe(svgmin())
+    .pipe(svgSymbols({
+      templates: ['default-svg']
+    }))
+    .pipe(rimraf())
+    .pipe(rename('icons.svg'))
+    .pipe(gulp.dest(`${PATHS.docs}/assets/icons`));
+};
 
 // Eslint for JS
 function eslint(done) {
@@ -242,6 +257,7 @@ function watchFiles(done) {
   gulp.watch("src/assets/scss/**/*.scss", gulp.series(css, liveReload));
   gulp.watch("src/assets/js/**/*.js", gulp.series(js, liveReload));
   gulp.watch("src/assets/img/**/*", gulp.series(images, liveReload));
+  gulp.watch("src/assets/icons/**/*", gulp.series(svgSprite, liveReload));
   gulp.watch(
     ["src/pages/**/*.html", "src/data/**/*.yml"],
     gulp.series(html, liveReload)
@@ -259,6 +275,7 @@ exports.development = gulp.series(
     copyStaticFiles,
     copyFilesToRoot,
     images,
+    svgSprite,
     css,
     js
   ),
@@ -274,6 +291,7 @@ exports.build = gulp.series(
     copyStaticFiles,
     copyFilesToRoot,
     images,
+    svgSprite,
     html,
     css,
     js
