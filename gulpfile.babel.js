@@ -39,9 +39,9 @@ function loadConfig() {
 }
 const { PATHS, PORT } = loadConfig();
 
-// Remove the "dist" folder
+// Remove the "docs" folder
 function cleanUp(done) {
-  fs.removeSync(PATHS.dist);
+  fs.removeSync(PATHS.docs);
   done();
 }
 
@@ -54,7 +54,7 @@ function css() {
     .pipe(sass({ includePaths: PATHS.sassLibs }).on("error", sass.logError))
     .pipe(gulpif(PRODUCTION, postcss([autoprefixer(), cssnano()])))
     .pipe(gulpif(!PRODUCTION, sourcemaps.write(".")))
-    .pipe(gulp.dest(`${PATHS.dist}/assets/css`));
+    .pipe(gulp.dest(`${PATHS.docs}/assets/css`));
 }
 
 // Stylelint for CSS & SCSS
@@ -72,43 +72,43 @@ function stylelint(done) {
 // Create critical CSS
 function criticalCSS() {
   return gulp
-    .src(`${PATHS.dist}/**/*.html`)
+    .src(`${PATHS.docs}/**/*.html`)
     .pipe(
       critical({
-        base: PATHS.dist,
+        base: PATHS.docs,
         inline: true,
-        css: [`${PATHS.dist}/assets/css/app.css`]
+        css: [`${PATHS.docs}/assets/css/app.css`]
       }).on("error", function(err) {
         console.error(err.message);
       })
     )
-    .pipe(gulp.dest(PATHS.dist));
+    .pipe(gulp.dest(PATHS.docs));
 }
 
 // Remove unused CSS
 function cleanUnusedCSS() {
   return gulp
-    .src(`${PATHS.dist}/**/*.css`)
+    .src(`${PATHS.docs}/**/*.css`)
     .pipe(
       purgecss({
-        content: [`${PATHS.dist}/**/*.{html,js}`]
+        content: [`${PATHS.docs}/**/*.{html,js}`]
       })
     )
-    .pipe(gulp.dest(PATHS.dist));
+    .pipe(gulp.dest(PATHS.docs));
 }
 
 // Compress assets
 function compressAssets() {
   return gulp
-    .src(`${PATHS.dist}/**/*.{css,js,html}`)
+    .src(`${PATHS.docs}/**/*.{css,js,html}`)
     .pipe(gzip({ extension: "gzip" }))
-    .pipe(gulp.dest(PATHS.dist));
+    .pipe(gulp.dest(PATHS.docs));
 }
 
 // Revisioning files
 function revFiles() {
   return gulp
-    .src(`${PATHS.dist}/**/*.{css,html,js}`)
+    .src(`${PATHS.docs}/**/*.{css,html,js}`)
     .pipe(
       RevAll.revision({
         dontRenameFile: [/.html/g],
@@ -116,7 +116,7 @@ function revFiles() {
       })
     )
     .pipe(RevDelete())
-    .pipe(gulp.dest(PATHS.dist));
+    .pipe(gulp.dest(PATHS.docs));
 }
 
 // Eslint for JS
@@ -146,7 +146,7 @@ function js() {
     .pipe(sourcemaps.init({ loadMaps: true }))
     .pipe(gulpif(!PRODUCTION, sourcemaps.write(".")))
     .pipe(gulpif(PRODUCTION, uglify()))
-    .pipe(gulp.dest(`${PATHS.dist}/assets/js`));
+    .pipe(gulp.dest(`${PATHS.docs}/assets/js`));
 }
 
 // Compile Nunjucks into HTML
@@ -171,7 +171,7 @@ function html() {
         }
       })
     )
-    .pipe(gulp.dest(PATHS.dist));
+    .pipe(gulp.dest(PATHS.docs));
 }
 
 // Copy files from the "src/assets" folder
@@ -179,21 +179,21 @@ function html() {
 function copyAssets() {
   return gulp
     .src(PATHS.assets, { nodir: true })
-    .pipe(gulp.dest(`${PATHS.dist}/assets`));
+    .pipe(gulp.dest(`${PATHS.docs}/assets`));
 }
 
-// Copy static files to "dist" folder
+// Copy static files to "docs" folder
 function copyStaticFiles() {
   return gulp
     .src(PATHS.staticFiles, { allowEmpty: true })
-    .pipe(gulp.dest(PATHS.dist));
+    .pipe(gulp.dest(PATHS.docs));
 }
 
-// Copy static files to "dist" folder
+// Copy static files to "docs" folder
 function copyFilesToRoot() {
   return gulp
     .src(PATHS.rootFiles, { allowEmpty: true })
-    .pipe(gulp.dest(PATHS.dist));
+    .pipe(gulp.dest(PATHS.docs));
 }
 
 // Copy images
@@ -214,14 +214,14 @@ function images() {
         ])
       )
     )
-    .pipe(gulp.dest(`${PATHS.dist}/assets`));
+    .pipe(gulp.dest(`${PATHS.docs}/assets`));
 }
 
 // Start a server with Browsersync
 function server(done) {
   browserSync.init(
     {
-      server: PATHS.dist,
+      server: PATHS.docs,
       port: PORT,
       open: false
     },
