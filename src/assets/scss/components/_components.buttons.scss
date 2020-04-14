@@ -57,3 +57,10 @@
 .button--yellow {
   background-color: $color-yellow;
 }
+
+.button--transparent {
+  height: 60px;
+  width: 170px;
+  background-color: rgb(0, 0, 0, .3);
+  color: $color-white;
+}
