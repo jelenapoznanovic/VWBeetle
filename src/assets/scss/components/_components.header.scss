@@ -11,10 +11,12 @@
   height: 10px;
 }
 
-.header-main__top--dark {
-  background-color: $color-dark;
-}
+.header-main__middle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-.header-main__top--yellow {
-  background-color: $color-yellow;
+  h1 {
+    margin-bottom: 0;
+  }
 }
