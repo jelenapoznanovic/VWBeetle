@@ -1,3 +1,15 @@
 .header-main {
   @include min-screen($breakpoint-medium) {}
 }
+
+.header-main--top {
+  height: 10px;
+}
+
+.header-main--top__gray {
+  background-color: $color-gray;
+}
+
+.header-main--top__yellow {
+  background-color: $color-yellow;
+}
