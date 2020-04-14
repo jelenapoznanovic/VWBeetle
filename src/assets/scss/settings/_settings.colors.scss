@@ -19,3 +19,11 @@ $color-btn-active: darken($color-base, 15%);
 $color-input: $color-dark;
 $color-input-placeholder: rgba($color-dark, .5);
 $color-border: $color-dark;
+
+.bgr-color-yellow {
+    background-color: $color-yellow;
+}
+
+.bgr-color-dark {
+    background-color: $color-dark;
+}
