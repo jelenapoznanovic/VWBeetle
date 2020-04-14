@@ -19,9 +19,14 @@ $breakpoint-medium: 1024px;
 $breakpoint-large: 1216px;
 $breakpoint-extralarge: 1408px; 
 
-$btn--primary-height: 40px;
+$btn--primary-height: 50px;
+$btn--primary-width: 160px;
 $btn--primary-padding: 0 20px;
 
-$input-height: 40px;
+$input-height: 60px;
 $input-padding: 20px;
 $input-padding--large: 25px 0;
+
+
+// Gutter Blueprint grid
+$gutter: 20px;

@@ -3,8 +3,8 @@ PORT: 8080
 
 # Gulp path references
 PATHS:
-  # Path to "dist" folder
-  dist: dist
+  # Path to "docs" folder
+  docs: docs
   # Paths to Sass libraries, which can then be loaded with @import
   # without the need for the full path "node_modules/.." everytime
   sassLibs:
@@ -21,7 +21,7 @@ PATHS:
     - "src/assets/**/*.{jpg,jpeg,png,gif,svg,webp}"
     - "!src/assets/root/**/*"
     - "!src/assets/fonts/**"
-  # Path to static files to copy to "dist"
+  # Path to static files to copy to "docs"
   staticFiles:
     - "src/robots.txt"
     - "src/favicon.ico"

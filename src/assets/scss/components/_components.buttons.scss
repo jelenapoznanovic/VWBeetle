@@ -40,16 +40,42 @@
   display: inline-flex;
   align-items: center;
   height: $btn--primary-height;
-  width: auto;
+  width: $btn--primary-width;
   padding: $btn--primary-padding;
   color: $color-btn;
   font-size: $base-font-size;
   text-decoration: none;
+  background-color: $color-yellow;
 
   &:not(:disabled) {
 
     &:hover,
     &:focus,
-    &:active {}
+    &:active {
+      background-color: rgba(255, 255, 0, 0.5);
+
+    }
   }
 }
+
+.button--middle {
+  height: 60px;
+  width: 170px;
+}
+
+.button--transparent {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: $color-white;
+
+  
+  &:not(:disabled) {
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: rgba(0, 0, 0, 0.1);
+
+    }
+  }
+}
+

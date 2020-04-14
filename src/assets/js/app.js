@@ -1,2 +1,9 @@
 // ON DOCUMENT READY
-$(document).ready(() => {});
+$(document).ready(() => {
+
+    //SVG for Everybody (ie9+, ...)
+    svg4everybody();
+    
+});
+
+

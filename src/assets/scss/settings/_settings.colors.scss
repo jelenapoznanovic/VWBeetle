@@ -2,6 +2,7 @@ $color-white: #fff;
 $color-black: #26262a;
 $color-dark: #303033;
 $color-yellow: #f8dd5a;
+$color-gray: #efefef;
 $color-base: $color-dark;
 
 $color-text: $color-base;
@@ -18,3 +19,4 @@ $color-btn-active: darken($color-base, 15%);
 $color-input: $color-dark;
 $color-input-placeholder: rgba($color-dark, .5);
 $color-border: $color-dark;
+
