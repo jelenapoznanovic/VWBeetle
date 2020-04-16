@@ -1,16 +1,25 @@
 <header class="header-main">
-    <div class="header-main__top">
-        <div class="header-main__top-content" bp="grid gap-none">
-            <div class="bgr-color-dark" bp="4"></div>
-            <div class="bgr-color-yellow" bp="8"></div>
-          </div>
-    </div>
-    <div class="header-main__middle">
-        <h1 class="logo">VW Beetle</h1>
-        <div class="icon-hamburger">
-            <a href="">{{ allMacros.icon('hamburger') }}</a>
+    <div class="header-main__top-content" bp="grid gap-none">
+        <div class="bgr-color-dark" bp="4"></div>
+        <div class="bgr-color-yellow" bp="8"></div>
+      </div>
+    <div class="wrapper">
+        <div class="header-main__top">
+        </div>
+        <div class="header-main__bottom">
+            <h1 class="header-main__logo">VW Beetle</h1>
+            <div class="icon-hamburger header-main__icon-hamburger">
+                <a href="">{{ allMacros.icon('hamburger') }}</a>
+            </div>
+            <nav class="header-main__navigation header-main__navigation--dropdown">
+                <ul>
+                    <li><a href="">Best seller</a></li>
+                    <li><a href="">News</a></li>
+                    <li><a href="">Discounts</a></li>
+                    <li><a href="">Partners</a></li>
+                </ul>
+            </nav>
         </div>
     </div>
 
-    <button class="button button--transparent">Button</button>
 </header>

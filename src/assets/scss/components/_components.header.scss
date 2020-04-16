@@ -1,22 +1,54 @@
 .header-main {
   @include min-screen($breakpoint-medium) {}
-
+  
 }
 
 .header-main__top-content {
-  height: 100%;
+  height: 10px;
+  margin-bottom: 40px;
+  
+  @include min-screen($breakpoint-medium) {
+    margin-bottom: 70px;
+  }
 }
 
 .header-main__top {
   height: 10px;
 }
 
-.header-main__middle {
+.header-main__bottom {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
+  
   h1 {
     margin-bottom: 0;
   }
 }
+
+.header-main__icon-hamburger {
+
+  @include min-screen($breakpoint-mobile) {
+    display: none;
+  }
+}
+
+.header-main__navigation {
+  display: none;
+
+  @include min-screen($breakpoint-mobile) {
+      display: flex;
+  }
+
+  li {
+    display: inline-flex;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    font-weight: 700;
+    
+    a {
+      color: $color-gray-light;
+    }
+  }
+}
+
