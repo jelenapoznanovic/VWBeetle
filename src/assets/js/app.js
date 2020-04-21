@@ -66,7 +66,12 @@ $(document).ready(() => {
 			// $.fn.smoothScroll only: whether to prevent the default click action
 			preventDefault: true
 		});
-	// END SCROLL PAGE
+    // END SCROLL PAGE
+    
+    //SHOW NAV ON HAMBURGER CLICK
+    $('.header-main__hamburger').on('click', function() {
+        $('.header-main').toggleClass('show-nav')
+    })
 
 });
 
