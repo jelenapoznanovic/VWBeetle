@@ -1,3 +1,43 @@
 .footer-main {
   @include min-screen($breakpoint-medium) {}
 }
+
+.footer-main__content {
+  display: flex;
+  flex-direction: column-reverse;
+  
+  @include min-screen($breakpoint-medium) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.footer-main__content--top {
+  width: 100%;
+  @include min-screen($breakpoint-medium) {
+    width: 20%;
+  }
+}
+
+.footer-main__content--top,
+.footer-main__content--middle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  ul {
+    margin-bottom: 0;
+  }
+
+  li {
+    display: inline-flex;
+  }
+}
+
+.cube-wrapper {
+  display: inline-flex;
+}
+
+.social__item--cube {
+  display: inline-flex;
+
+}
