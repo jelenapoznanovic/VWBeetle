@@ -75,6 +75,9 @@
 }
 
 .footer-main__links {
+  background-image: url('../img/cube.png'), url('../img/cube.png'), url('../img/cube.png');
+  background-repeat: no-repeat;
+  background-position: 60% 10%, 30% 90%, 95% 75%;
   padding: 70px 0;
 
   ul {
@@ -88,6 +91,10 @@
   a {
     color: white;
     font-size: 14px;
+
+    &:hover {
+      color: darken(white, 50%);
+    }
   }
 }
 
@@ -116,4 +123,11 @@
     bottom: 0;
     left: 0;
   }
+}
+
+.footer-main__bottom {
+  color: white;
+  font-size: 12px;
+  text-align: right;
+  padding-bottom: 25px;
 }
