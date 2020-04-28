@@ -10,7 +10,15 @@
 
 <div id="news"></div>
 <div id="discounts"></div>
-<section id="partners"">
+
+<section class="hero-section">
+    <div class="wrapper wrapper--no-padding-mobile">
+        {% include "./components/hero-slider.html" -%}
+    </div>
+</section>
+
+
+<section id="partners">
     <div class="wrapper section-partners">
          
         <div bp="flex">
@@ -36,6 +44,8 @@
     </div>
     
 </section>
+
+
 {% include "./components/footer.html" -%}
 
 {% endblock %}

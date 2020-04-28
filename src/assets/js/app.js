@@ -73,6 +73,16 @@ $(document).ready(() => {
         $('.header-main').toggleClass('show-nav')
     })
 
+    // SLICK SLIDER
+    $('.js-hero-slider').slick({
+        dots: true,
+        arrows: false,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 1,
+        adaptiveHeight: true
+      });
+
 });
 
 

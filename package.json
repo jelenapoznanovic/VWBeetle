@@ -25,7 +25,8 @@
     "fix-js": "eslint \"src/**/*.js\" --fix || exit 0"
   },
   "dependencies": {
-    "blueprint-css": "^3.0.0-beta.0"
+    "blueprint-css": "^3.0.0-beta.0",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "@babel/core": "^7.6.4",
@@ -56,11 +57,15 @@
     "gulp-nunjucks-render": "^2.2.3",
     "gulp-postcss": "^8.0.0",
     "gulp-purgecss": "^1.2.0",
+    "gulp-rename": "^2.0.0",
     "gulp-rev-all": "^2.0.2",
     "gulp-rev-delete-original": "^0.2.3",
+    "gulp-rimraf": "^1.0.0",
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-stylelint": "^9.0.0",
+    "gulp-svg-symbols": "^3.2.3",
+    "gulp-svgmin": "^2.2.0",
     "gulp-uglify": "^3.0.2",
     "imagemin-gifsicle": "^6.0.1",
     "imagemin-mozjpeg": "^8.0.0",
@@ -72,10 +77,6 @@
     "stylelint-scss": "^3.11.1",
     "vinyl-buffer": "^1.0.1",
     "vinyl-source-stream": "^2.0.0",
-    "gulp-rimraf": "^1.0.0",
-    "gulp-rename": "^2.0.0",
-    "gulp-svg-symbols": "^3.2.3",
-    "gulp-svgmin": "^2.2.0",
     "yargs": "^14.2.0"
   }
 }
