@@ -6,6 +6,45 @@
 
 {% block content %}
 {% include "./components/header.html" -%}
+<div id="best-seller"></div>
+
+<div id="news"></div>
+<div id="discounts"></div>
+
+<section class="hero-section">
+    <div class="wrapper wrapper--no-padding-mobile">
+        {% include "./components/hero-slider.html" -%}
+    </div>
+</section>
+
+
+<section id="partners">
+    <div class="wrapper section-partners">
+         
+        <div bp="flex">
+        <div class="section-partners__title bp="fit">
+            <span><h2>Our partners   |</h2></span>
+        </div>
+        <div bp="fill">
+            <div class="section-partners__logos">
+                <div class="img-wrap">
+                    <img src="./assets/img/mercedes.svg" alt="">
+                </div>
+                <div class="img-wrap">
+                    <img src="./assets/img/hummer.svg" alt="">
+                </div>
+                <div class="img-wrap">
+                    <img src="./assets/img/jaguar.svg" alt="">
+                </div>
+                
+            </div>
+        </div>
+        
+        
+    </div>
+    
+</section>
+
 
 {% include "./components/footer.html" -%}
 

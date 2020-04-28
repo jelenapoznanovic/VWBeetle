@@ -1,16 +1,26 @@
 <header class="header-main">
-    <div class="header-main__top">
-        <div class="header-main__top-content" bp="grid gap-none">
-            <div class="bgr-color-dark" bp="4"></div>
-            <div class="bgr-color-yellow" bp="8"></div>
-          </div>
-    </div>
-    <div class="header-main__middle">
-        <h1 class="logo">VW Beetle</h1>
-        <div class="icon-hamburger">
-            <a href="">{{ allMacros.icon('hamburger') }}</a>
+    <div class="header-main__top" bp="grid gap-none">
+        <div class="bgr-color-dark" bp="4"></div>
+        <div class="bgr-color-yellow" bp="8"></div>
+      </div>
+    <div class="wrapper">
+        <div class="header-main__bottom">
+            <h1 class="header-main__logo">VW Beetle</h1>
+            <div class="header-main__hamburger">
+                <div class="header-main__hamburger-line header-main__hamburger-line--top"></div>
+                <div class="header-main__hamburger-line header-main__hamburger-line--middle"></div>
+                <div class="header-main__hamburger-line header-main__hamburger-line--bottom"></div>
+            </div>
+            <nav class="header-main__navigation">
+                <ul>
+
+                    <li class="is-active"><a href="#best-seller">Best seller</a></li>
+                    <li><a href="#news">News</a></li>
+                    <li><a href="#discounts">Discounts</a></li>
+                    <li><a href="#partners">Partners</a></li>
+                </ul>
+            </nav>
         </div>
     </div>
 
-    <button class="button button--transparent">Button</button>
 </header>

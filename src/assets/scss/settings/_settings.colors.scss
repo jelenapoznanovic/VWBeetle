@@ -3,6 +3,8 @@ $color-black: #26262a;
 $color-dark: #303033;
 $color-yellow: #f8dd5a;
 $color-gray: #efefef;
+$color-gray-light: #8e9298;
+$color-gray-dark: #2c2c31;
 $color-base: $color-dark;
 
 $color-text: $color-base;
@@ -10,6 +12,7 @@ $color-text: $color-base;
 $color-text-active: $color-dark;
 $color-text-click: lighten($color-base, 10%);
 $color-link: $color-base;
+$color-title: $color-dark;
 
 $color-btn: $color-base;
 $color-btn-hover: darken($color-base, 5%);

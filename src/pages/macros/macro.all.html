@@ -3,3 +3,36 @@
 	<use xlink:href="assets/icons/icons.svg#{{ name }}"></use>
 </svg>
 {% endmacro %}
+
+{% macro social(classModifier, shareFlag) %}
+<div class="social {{ classModifier }}">
+	<ul>
+		<li class="social__item social__item--twitter"><a href="">
+			<svg role="img" class="icon">
+				<use xlink:href="assets/icons/icons.svg#twitter"></use>
+			</svg>
+			
+		</a></li>
+		<li class="social__item social__item--facebook"><a href="">
+			<svg role="img" class="icon">
+				<use xlink:href="assets/icons/icons.svg#facebook"></use>
+			</svg>
+
+		</a></li>
+		<li class="social__item social__item--instagram"><a href="">
+			<svg role="img" class="icon">
+				<use xlink:href="assets/icons/icons.svg#instagram"></use>
+			</svg>
+
+		</a></li>
+		<li class="social__item social__item--pinterest"><a href="">
+			<svg role="img" class="icon">
+				<use xlink:href="assets/icons/icons.svg#pinterest"></use>
+			</svg>
+
+		</a></li>
+	</ul>
+</div>
+{% endmacro %}
+
+

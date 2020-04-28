@@ -1,3 +1,133 @@
-.footer-main {
-  @include min-screen($breakpoint-medium) {}
+.footer-main__content {
+  padding: 30px 0;
+  display: flex;
+  flex-direction: column-reverse;
+  
+  @include min-screen($breakpoint-mobile-footer) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.footer-main__content--top,
+.footer-main__content--middle {
+  display: flex;
+  align-items: center;
+
+  ul {
+    margin-bottom: 0;
+  }
+
+  li {
+    margin-right: 20px;
+    display: inline-flex;
+  }
+
+  a {
+    color: $color-yellow;
+    font-size: 14px;
+    transition: opacity .2s ease;
+    
+    &:hover {
+      opacity: .8;
+    }
+  }
+
+}
+
+.footer-main__content--top {
+  width: 100%;
+  margin-bottom: 35px;
+  justify-content: space-between;
+
+  @include min-screen($breakpoint-mobile-footer) {
+    width: 25%;
+    margin-bottom: 0;
+  }
+}
+
+.footer-main__content--middle {
+
+  ul {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  li {
+    margin: 0 15px 15px;
+  }
+  
+  @include min-screen($breakpoint-mobile) {
+    justify-content: space-between;
+    
+    li {
+      margin: 0 20px 0 0;
+    }
+  }
+
+}
+
+.cube-wrapper {
+  display: inline-flex;
+  color: $color-yellow;
+}
+
+.footer-main__links {
+  background-image: url('../img/cube.png'), url('../img/cube.png'), url('../img/cube.png');
+  background-repeat: no-repeat;
+  background-position: 60% 10%, 30% 90%, 95% 75%;
+  padding: 70px 0;
+
+  ul {
+    margin-bottom: 60px;
+  }
+
+  li {
+    margin-bottom: 20px;
+  }
+
+  a {
+    color: white;
+    font-size: 14px;
+
+    &:hover {
+      color: darken(white, 50%);
+    }
+  }
+}
+
+.footer-main__links-wrap {
+  display: flex;
+}
+
+.text-rotation {
+  writing-mode: tb-rl;
+  transform: rotate(-180deg);
+  text-align: right;
+  margin-right: 20px;
+  position: relative;
+  padding-bottom: 30px;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+
+  &:before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border: 2px solid $color-yellow;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+.footer-main__bottom {
+  color: white;
+  font-size: 12px;
+  text-align: right;
+  padding-bottom: 25px;
 }

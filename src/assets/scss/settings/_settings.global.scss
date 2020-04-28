@@ -13,11 +13,13 @@ $page-max-width: 1560px;
 $page-default-width: 1160px;
 
 // Breakpoints
-$breakpoint-tiny: 580px;
+$breakpoint-tiny: 480px;
 $breakpoint-small: 768px;
 $breakpoint-medium: 1024px;
 $breakpoint-large: 1216px;
 $breakpoint-extralarge: 1408px; 
+$breakpoint-mobile: $breakpoint-small; 
+$breakpoint-mobile-footer: 900px; 
 
 $btn--primary-height: 50px;
 $btn--primary-width: 160px;
