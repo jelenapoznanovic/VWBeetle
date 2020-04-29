@@ -1,8 +1,15 @@
+.hero-slider-wrap {
+    position: relative;
+}
+
+
+
 .hero-section {
     padding-top: 116px;
 }
 
 .hero-slider {
+    margin-bottom: 0 !important;
 
     .slick-slide {
         position: relative;
@@ -11,7 +18,7 @@
     img {
         z-index: 1;
         position: relative;
-        max-width: 100%;
+        width: 100%;
         height: auto;
         opacity: 0;
         visibility: hidden;
@@ -27,7 +34,7 @@
         bottom: 10px;
         left: 0;
         right: 0;
-        counter-reset: section;
+        counter-reset: slide;
         
         @include min-screen($breakpoint-mobile) {
             left: 10px;
@@ -80,8 +87,8 @@
                 
                 &::after {
                     color: white;
-                    counter-increment: section;
-                    content: counter(section);
+                    counter-increment: slide;
+                    content: counter(slide);
                     font-size: 14px;
                 }
             }
@@ -94,6 +101,7 @@
     background-size: cover;
     background-position: 25% 50%;
     position: relative;
+    display: block !important;
 
     &::before {
         content: '';
@@ -127,9 +135,9 @@
     text-align: center;
     
     @include min-screen($breakpoint-mobile) {
-        transform: translateX(0);
-        top: 100px;
-        left: 60%;
+        transform: translate(0, -50%);
+        top: 50%;
+        left: 70%;
         text-align: left;
     }
     
