@@ -1016,6 +1016,9 @@ table,
 fieldset {
   margin-bottom: 20px; }
 
+img {
+  min-width: 100%; }
+
 /* ------------------------------------*\
     #HEADINGS
 \*------------------------------------ */
@@ -1655,74 +1658,78 @@ a {
 .slick-arrow.slick-hidden {
   display: none; }
 
+.hero-slider-wrap {
+  position: relative; }
+
 .hero-section {
   padding-top: 116px; }
 
-.hero-slider .slick-slide {
-  position: relative; }
-
-.hero-slider img {
-  z-index: 1;
-  position: relative;
-  max-width: 100%;
-  height: auto;
-  opacity: 0;
-  visibility: hidden; }
-  @media screen and (min-width: 768px) {
-    .hero-slider img {
-      opacity: 1;
-      visibility: visible; } }
-
-.hero-slider .slick-dots {
-  position: absolute;
-  bottom: 10px;
-  left: 0;
-  right: 0;
-  counter-reset: section; }
-  @media screen and (min-width: 768px) {
-    .hero-slider .slick-dots {
-      left: 10px;
-      text-align: left; } }
-  .hero-slider .slick-dots .slick-active button {
-    background-color: #f8dd5a;
-    font-weight: 700; }
-    .hero-slider .slick-dots .slick-active button::after {
-      color: #26262a; }
-  .hero-slider .slick-dots li,
-  .hero-slider .slick-dots button {
-    width: 10px;
-    height: 10px; }
+.hero-slider {
+  margin-bottom: 0 !important; }
+  .hero-slider .slick-slide {
+    position: relative; }
+  .hero-slider img {
+    z-index: 1;
+    position: relative;
+    width: 100%;
+    height: auto;
+    opacity: 0;
+    visibility: hidden; }
     @media screen and (min-width: 768px) {
-      .hero-slider .slick-dots li,
-      .hero-slider .slick-dots button {
-        width: 50px;
-        height: 50px; } }
-  .hero-slider .slick-dots li {
-    margin: 0 5px; }
+      .hero-slider img {
+        opacity: 1;
+        visibility: visible; } }
+  .hero-slider .slick-dots {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    counter-reset: slide; }
     @media screen and (min-width: 768px) {
-      .hero-slider .slick-dots li {
-        margin: 0 1px; } }
-  .hero-slider .slick-dots button {
-    background-color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center; }
-    .hero-slider .slick-dots button::before {
-      display: none; }
-    @media screen and (min-width: 768px) {
-      .hero-slider .slick-dots button {
-        background-color: #26262a; }
-        .hero-slider .slick-dots button::after {
-          color: white;
-          counter-increment: section;
-          content: counter(section);
-          font-size: 14px; } }
+      .hero-slider .slick-dots {
+        left: 10px;
+        text-align: left; } }
+    .hero-slider .slick-dots .slick-active button {
+      background-color: #f8dd5a;
+      font-weight: 700; }
+      .hero-slider .slick-dots .slick-active button::after {
+        color: #26262a; }
+    .hero-slider .slick-dots li,
+    .hero-slider .slick-dots button {
+      width: 10px;
+      height: 10px; }
+      @media screen and (min-width: 768px) {
+        .hero-slider .slick-dots li,
+        .hero-slider .slick-dots button {
+          width: 50px;
+          height: 50px; } }
+    .hero-slider .slick-dots li {
+      margin: 0 5px; }
+      @media screen and (min-width: 768px) {
+        .hero-slider .slick-dots li {
+          margin: 0 1px; } }
+    .hero-slider .slick-dots button {
+      background-color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      .hero-slider .slick-dots button::before {
+        display: none; }
+      @media screen and (min-width: 768px) {
+        .hero-slider .slick-dots button {
+          background-color: #26262a; }
+          .hero-slider .slick-dots button::after {
+            color: white;
+            counter-increment: slide;
+            content: counter(slide);
+            font-size: 14px; } }
 
 .hero-slider__item {
   height: 280px;
   background-size: cover;
   background-position: 25% 50%;
-  position: relative; }
+  position: relative;
+  display: block !important; }
   .hero-slider__item::before {
     content: '';
     position: absolute;
@@ -1750,9 +1757,9 @@ a {
   text-align: center; }
   @media screen and (min-width: 768px) {
     .hero-slider__text {
-      transform: translateX(0);
-      top: 100px;
-      left: 60%;
+      transform: translate(0, -50%);
+      top: 50%;
+      left: 70%;
       text-align: left; } }
   .hero-slider__text h2 {
     line-height: 1.9;
