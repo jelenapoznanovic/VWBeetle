@@ -1421,7 +1421,8 @@ a {
   background-color: rgba(0, 0, 0, 0.3);
   color: #fff; }
   .button--transparent:not(:disabled):hover, .button--transparent:not(:disabled):focus, .button--transparent:not(:disabled):active {
-    background-color: rgba(0, 0, 0, 0.1); }
+    background-color: rgba(0, 0, 0, 0.25);
+    color: #fff; }
 
 .section-partners {
   padding: 30px 0;
@@ -1741,6 +1742,8 @@ a {
     .hero-slider .slick-dots .slick-active button {
       background-color: #f8dd5a;
       font-weight: 700; }
+      .hero-slider .slick-dots .slick-active button:hover {
+        background-color: #e2bd0a; }
       .hero-slider .slick-dots .slick-active button::after {
         color: #26262a; }
     .hero-slider .slick-dots li,
@@ -1761,12 +1764,17 @@ a {
       background-color: white;
       display: flex;
       align-items: center;
-      justify-content: center; }
+      justify-content: center;
+      transition: background-color .2s ease; }
+      .hero-slider .slick-dots button:hover {
+        background-color: #e6e6e6; }
       .hero-slider .slick-dots button::before {
         display: none; }
       @media screen and (min-width: 768px) {
         .hero-slider .slick-dots button {
           background-color: #26262a; }
+          .hero-slider .slick-dots button:hover {
+            background-color: #323237; }
           .hero-slider .slick-dots button::after {
             color: white;
             counter-increment: slide;
