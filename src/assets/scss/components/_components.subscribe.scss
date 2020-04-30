@@ -1,0 +1,46 @@
+.subscribe-section {
+    padding: 65px 0 50px;
+    text-align: center;
+
+    h2 {
+        text-transform: uppercase;
+        margin-bottom: 35px;
+    }
+}
+
+.discount__text {
+    max-width: 450px;
+    margin: 0 auto 35px;
+    
+    @include min-screen($breakpoint-mobile) {
+        margin: 0 auto 55px;
+    }
+    
+    p {
+        line-height: 2.4;
+    }
+}
+
+.discount__input {
+    display: block;
+    position: relative;
+
+    span {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+
+        .icon {
+            width: 16px;
+            height: 16px;
+        }
+    }
+    
+    input {
+        margin-bottom: 50px;
+        
+        @include min-screen($breakpoint-mobile) {
+            margin-bottom: 70px;
+        }
+    }
+}

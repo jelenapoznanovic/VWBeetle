@@ -39,21 +39,23 @@
 .button--primary {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   height: $btn--primary-height;
   width: $btn--primary-width;
   padding: $btn--primary-padding;
   color: $color-btn;
-  font-size: $base-font-size;
+  font-size: 14px;
   text-decoration: none;
   background-color: $color-yellow;
+  text-transform: uppercase;
+  font-weight: 700;
 
   &:not(:disabled) {
 
     &:hover,
     &:focus,
     &:active {
-      background-color: rgba(255, 255, 0, 0.5);
-
+      background-color: darken($color-yellow, 10%);
     }
   }
 }
@@ -61,7 +63,10 @@
 .button--middle {
   height: 60px;
   width: 170px;
-  
+}
+
+.button--large {
+  width: 180px;
 }
 
 .button--transparent {

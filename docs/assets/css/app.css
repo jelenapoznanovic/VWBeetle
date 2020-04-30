@@ -1028,7 +1028,8 @@ h3,
 h4,
 h5,
 h6 {
-  color: #303033; }
+  color: #303033;
+  font-weight: 800; }
   h1 > a,
   h2 > a,
   h3 > a,
@@ -1087,14 +1088,14 @@ a {
   width: 100%;
   max-width: 100%;
   padding-right: 10px;
-  padding-left: 10px; }
+  padding-left: 10px;
+  margin-right: auto;
+  margin-left: auto; }
   @media screen and (min-width: 1216px) {
     .wrapper {
       max-width: calc(1160px + (20px * 2));
       padding-right: 20px;
-      padding-left: 20px;
-      margin-right: auto;
-      margin-left: auto; } }
+      padding-left: 20px; } }
 
 .wrapper--small {
   max-width: 650px; }
@@ -1396,19 +1397,25 @@ a {
 .button--primary {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   height: 50px;
   width: 160px;
   padding: 0 20px;
   color: #303033;
-  font-size: 16px;
+  font-size: 14px;
   text-decoration: none;
-  background-color: #f8dd5a; }
+  background-color: #f8dd5a;
+  text-transform: uppercase;
+  font-weight: 700; }
   .button--primary:not(:disabled):hover, .button--primary:not(:disabled):focus, .button--primary:not(:disabled):active {
-    background-color: rgba(255, 255, 0, 0.5); }
+    background-color: #f6d329; }
 
 .button--middle {
   height: 60px;
   width: 170px; }
+
+.button--large {
+  width: 180px; }
 
 .button--transparent {
   background-color: rgba(0, 0, 0, 0.3);
@@ -1452,6 +1459,38 @@ a {
     display: flex;
     justify-content: space-around;
     align-items: center; } }
+
+.subscribe-section {
+  padding: 65px 0 50px;
+  text-align: center; }
+  .subscribe-section h2 {
+    text-transform: uppercase;
+    margin-bottom: 35px; }
+
+.discount__text {
+  max-width: 450px;
+  margin: 0 auto 35px; }
+  @media screen and (min-width: 768px) {
+    .discount__text {
+      margin: 0 auto 55px; } }
+  .discount__text p {
+    line-height: 2.4; }
+
+.discount__input {
+  display: block;
+  position: relative; }
+  .discount__input span {
+    position: absolute;
+    top: 20px;
+    right: 20px; }
+    .discount__input span .icon {
+      width: 16px;
+      height: 16px; }
+  .discount__input input {
+    margin-bottom: 50px; }
+    @media screen and (min-width: 768px) {
+      .discount__input input {
+        margin-bottom: 70px; } }
 
 /* Slider */
 .slick-loading .slick-list {

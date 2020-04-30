@@ -1,0 +1,18 @@
+{% import "../macros/macro.all.html" as allMacros %}
+<div class="discout">
+    <h2>Get your Discount</h2>
+    <div class="discount__text">
+        <p>Subscribe to our newsletter and get notified about updates, discounts other changes.</p>
+    </div>
+    <form>
+        <label class="discount__input">
+            <input type="email" placeholder="mymail@contact.com" class="input input--primary">
+            <span>
+                {{ allMacros.icon('interface', 'icon--cube icon--large') }}
+            </span>
+        </label>
+        <button class="button button--primary button--large">sign up</button>
+    </form>
+</div>
+
+
