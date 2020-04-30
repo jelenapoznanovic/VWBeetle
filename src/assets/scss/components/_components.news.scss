@@ -1,0 +1,56 @@
+.news {
+    padding-top: 35px;
+    text-align: center;
+
+    h3 {
+        font-weight: normal;
+    }
+    
+    .grid-container { height: 100%; margin: 0; }
+    
+    .grid-container {
+      display: grid;
+      grid-template-columns: minmax(0, 58%) 42% ;
+      grid-template-rows:   1fr 1fr;
+      gap: 0px 0px;
+      grid-template-areas: "s a" "s b";
+      font-size: 0;
+    
+      > div {
+          overflow: hidden;
+      }
+    }
+    
+    /* For presentation only, no need to copy the code below */
+    .grid-container * { 
+     position: relative;
+    }
+    
+    .grid-container *:after { 
+     content:attr(class);
+     position: absolute;
+     top: 0;
+     left: 0;
+    }
+}
+
+.news__content-item1 { 
+    grid-area: s; 
+}
+
+.news__content-item2 {
+    grid-area: a; 
+}
+
+.news__content-item3 {
+    grid-area: b; 
+}
+
+.news__content-item1, 
+.news__content-item2,
+.news__content-item3 {
+
+    a {
+        font-size: 16px;
+    }
+}
