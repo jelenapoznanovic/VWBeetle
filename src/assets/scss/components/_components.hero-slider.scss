@@ -157,9 +157,14 @@
     h2 {
         line-height: 1.9;
         color: white;
+        font-weight: normal;
 
         @include min-screen($breakpoint-mobile) {
             color: $color-title;
+        }
+        
+        span {
+            font-weight: 800;
         }
     }
 
