@@ -39,11 +39,25 @@
 
     h2 {
         margin-bottom: 60px;
+        font-weight: normal;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+
+        span {
+            display: none;
+            font-family: "Arial";
+        }
     }
     
     @include min-screen($breakpoint-mobile) {
         h2 {
             margin-bottom: 0;
+
+            span {
+                margin-left: 20px;
+                display: inline-block;
+            }
         }
     }
 }
