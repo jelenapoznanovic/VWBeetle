@@ -27,7 +27,7 @@
     }
     
     .grid-container *:after { 
-     content:attr(class);
+     content:attr('');
      position: absolute;
      top: 0;
      left: 0;
