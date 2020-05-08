@@ -1506,8 +1506,7 @@ a {
 
 .news {
   padding-top: 35px;
-  text-align: center;
-  /* For presentation only, no need to copy the code below */ }
+  text-align: center; }
   .news h3 {
     font-weight: normal; }
   .news .grid-container {
@@ -1539,10 +1538,56 @@ a {
 .news__content-item3 {
   grid-area: b; }
 
-.news__content-item1 a,
-.news__content-item2 a,
-.news__content-item3 a {
-  font-size: 16px; }
+.news__content-item1,
+.news__content-item2,
+.news__content-item3 {
+  background-position: 0% 50%;
+  background-size: cover;
+  background-repeat: no-repeat; }
+  .news__content-item1 img,
+  .news__content-item2 img,
+  .news__content-item3 img {
+    display: none; }
+    @media screen and (min-width: 768px) {
+      .news__content-item1 img,
+      .news__content-item2 img,
+      .news__content-item3 img {
+        display: block; } }
+
+.news__content-item2,
+.news__content-item3 {
+  position: relative; }
+  .news__content-item2 a,
+  .news__content-item3 a {
+    font-size: 14px;
+    position: absolute !important; }
+    @media screen and (min-width: 768px) {
+      .news__content-item2 a,
+      .news__content-item3 a {
+        top: 30px;
+        left: 20px; } }
+
+.news__content-item1 {
+  position: relative; }
+  .news__content-item1 .news__content-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute !important; }
+    @media screen and (min-width: 768px) {
+      .news__content-item1 .news__content-wrap {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); } }
+    .news__content-item1 .news__content-wrap h2 {
+      color: white;
+      font-weight: 300;
+      margin-bottom: 0;
+      text-align: left;
+      line-height: 1.9;
+      margin-left: 25px; }
+      .news__content-item1 .news__content-wrap h2 span {
+        font-weight: 800; }
 
 /* Slider */
 .slick-loading .slick-list {

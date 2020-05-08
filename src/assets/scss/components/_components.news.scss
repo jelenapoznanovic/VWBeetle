@@ -6,7 +6,9 @@
         font-weight: normal;
     }
     
-    .grid-container { height: 100%; margin: 0; }
+    .grid-container { 
+        height: 100%; margin: 0; 
+    }
     
     .grid-container {
       display: grid;
@@ -21,7 +23,6 @@
       }
     }
     
-    /* For presentation only, no need to copy the code below */
     .grid-container * { 
      position: relative;
     }
@@ -46,11 +47,63 @@
     grid-area: b; 
 }
 
-.news__content-item1, 
+.news__content-item1,
 .news__content-item2,
 .news__content-item3 {
+    background-position: 0% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
 
+    img {
+        display: none;
+
+        @include min-screen($breakpoint-mobile) {
+            display: block;
+        }
+    }
+}
+
+.news__content-item2,
+.news__content-item3 {
+    position: relative;
+    
     a {
-        font-size: 16px;
+        font-size: 14px;
+        position: absolute !important;
+
+        @include min-screen($breakpoint-mobile) {
+            top: 30px;
+            left: 20px;
+        }
+    }
+}
+
+.news__content-item1 {
+    position: relative;
+    
+    .news__content-wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute !important;
+
+        @include min-screen($breakpoint-mobile) {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        h2 {
+            color: white;
+            font-weight: 300;
+            margin-bottom: 0;
+            text-align: left;
+            line-height: 1.9;
+            margin-left: 25px;
+
+            span {
+                font-weight: 800;
+            }
+        }
     }
 }
