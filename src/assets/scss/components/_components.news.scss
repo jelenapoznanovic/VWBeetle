@@ -11,16 +11,19 @@
     }
     
     .grid-container {
-      display: grid;
-      grid-template-columns: minmax(0, 58%) 42% ;
-      grid-template-rows:   1fr 1fr;
-      gap: 0px 0px;
-      grid-template-areas: "s a" "s b";
-      font-size: 0;
-    
-      > div {
-          overflow: hidden;
-      }
+        
+        @include min-screen($breakpoint-mobile) {
+            display: grid;
+            grid-template-columns: minmax(0, 58%) 42% ;
+            grid-template-rows:   1fr 1fr;
+            gap: 0px 0px;
+            grid-template-areas: "s a" "s b";
+            font-size: 0;
+        
+            > div {
+                overflow: hidden;
+            }
+        }
     }
     
     .grid-container * { 
@@ -35,25 +38,28 @@
     }
 }
 
-.news__content-item1 { 
-    grid-area: s; 
-}
-
-.news__content-item2 {
+.news__item--2 {
     grid-area: a; 
 }
 
-.news__content-item3 {
+.news__item--3 {
     grid-area: b; 
 }
 
-.news__content-item1,
-.news__content-item2,
-.news__content-item3 {
+.news__item {
     background-position: 0% 50%;
     background-size: cover;
     background-repeat: no-repeat;
+    padding-bottom: 100%;
 
+    @include min-screen($breakpoint-tiny) {
+        padding-bottom: 50%;
+    }
+    
+    @include min-screen($breakpoint-mobile) {
+        padding-bottom: 0;
+    }
+    
     img {
         display: none;
 
@@ -63,8 +69,8 @@
     }
 }
 
-.news__content-item2,
-.news__content-item3 {
+.news__item--2,
+.news__item--3 {
     position: relative;
     
     a {
@@ -78,10 +84,11 @@
     }
 }
 
-.news__content-item1 {
+.news__item--1 {
+    grid-area: s; 
     position: relative;
     
-    .news__content-wrap {
+    .news__item-inner {
         display: flex;
         justify-content: center;
         align-items: center;
