@@ -79,6 +79,16 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        transition: all .2s ease;
+
+        &.button--primary {
+
+            &:hover{
+                background-color: #fff;
+                opacity: 50%;
+                color: $color-dark;
+            }
+        }
 
         @include min-screen($breakpoint-mobile) {
             top: 30px;
@@ -119,6 +129,15 @@
 
             span {
                 font-weight: 800;
+            }
+        }
+
+        .button--primary {
+
+            &:hover {
+                background-color: #fff;
+                opacity: 50%;
+                color: $color-dark;
             }
         }
     }
