@@ -1454,7 +1454,8 @@ a {
   font-weight: normal;
   text-transform: uppercase;
   display: flex;
-  align-items: center; }
+  align-items: center;
+  justify-content: center; }
   .section-partners__title h2 span {
     display: none;
     font-family: "Arial"; }
