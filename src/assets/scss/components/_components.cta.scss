@@ -1,0 +1,50 @@
+.cta {
+    display: flex;
+}
+
+.cta__item {
+    padding: 80px 50px 80px 50px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.cta__img {
+    width: 28px;
+    height: 32px;
+}
+
+.cta__content {
+    margin-left: 50px;
+    
+    h4 {
+        line-height: 2.83;
+        margin-bottom: 0;
+    }
+    
+    span {
+        font-weight: 300;
+        display: block;
+    }
+    h4, 
+    span {
+        font-size: 12px;
+    }
+}
+
+.cta__item-smaller {
+    width: 30%;
+    
+    h4, 
+    span {
+        color: white;
+    }
+}
+
+.cta__item-wider {
+    width: 70%;
+    padding-left: 170px;
+
+    .cta__content {
+        margin-left: 115px;
+    }
+}

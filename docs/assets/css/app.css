@@ -1608,6 +1608,42 @@ a {
       opacity: 50%;
       color: #303033; }
 
+.cta {
+  display: flex; }
+
+.cta__item {
+  padding: 80px 50px 80px 50px;
+  display: inline-flex;
+  align-items: center; }
+
+.cta__img {
+  width: 28px;
+  height: 32px; }
+
+.cta__content {
+  margin-left: 50px; }
+  .cta__content h4 {
+    line-height: 2.83;
+    margin-bottom: 0; }
+  .cta__content span {
+    font-weight: 300;
+    display: block; }
+  .cta__content h4,
+  .cta__content span {
+    font-size: 12px; }
+
+.cta__item-smaller {
+  width: 30%; }
+  .cta__item-smaller h4,
+  .cta__item-smaller span {
+    color: white; }
+
+.cta__item-wider {
+  width: 70%;
+  padding-left: 170px; }
+  .cta__item-wider .cta__content {
+    margin-left: 115px; }
+
 /* Slider */
 .slick-loading .slick-list {
   background: #fff url("./ajax-loader.gif") center center no-repeat; }
