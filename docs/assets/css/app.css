@@ -1628,9 +1628,13 @@ a {
     .cta__item {
       padding: 80px 50px 80px 50px;
       display: inline-flex;
-      align-items: center; } }
+      align-items: center;
+      text-align: left; } }
   .cta__item .cta__img {
     margin: 0 auto 20px; }
+    @media screen and (min-width: 768px) {
+      .cta__item .cta__img {
+        margin: 0; } }
 
 .cta__img {
   width: 28px;

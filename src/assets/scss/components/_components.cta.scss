@@ -26,10 +26,15 @@
         padding: 80px 50px 80px 50px;
         display: inline-flex;
         align-items: center;
+        text-align: left;
     }
-
+    
     .cta__img {
         margin: 0 auto 20px;
+        
+        @include min-screen($breakpoint-mobile) {
+            margin: 0;
+        }            
     }
 }
 
