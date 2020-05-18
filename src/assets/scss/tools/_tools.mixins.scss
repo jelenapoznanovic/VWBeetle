@@ -82,3 +82,13 @@
   -webkit-user-select: none;
   -o-user-select: none;
 }
+
+@mixin dark-box {
+  color: white;
+  background-color: $color-black;
+}
+
+@mixin brend-box {
+  color: $color-dark;
+  background-color: $color-yellow;
+}

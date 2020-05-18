@@ -1,0 +1,20 @@
+{% import "../macros/macro.all.html" as allMacros %}
+
+{{ allMacros.ctaHeader('best seller of last month', 'top products of last month') }}
+
+<div class="cta">
+    <div class="cta__container">
+
+        {{ allMacros.ctaItem('cta__item--small cta__item--dark', 'ship-white.png', 'Free shipping Worldwide', 'only order from $ 14.000') }}
+        
+        {{ allMacros.ctaItem('cta__item--large', 'shop.png', 'Shop with confidence', 'only order from  14.000 USD') }}
+        
+    </div>
+    <div class="cta__container cta__container--reverse">
+        
+        {{ allMacros.ctaItem('cta__item--large cta__item--dark', 'ship-white.png', 'Free shipping Worldwide', 'only order from $ 14.000') }}
+        
+        {{ allMacros.ctaItem('cta__item--small', 'shop.png', 'Shop with confidence', 'only order from  14.000 USD') }}
+        
+    </div>
+</div>
