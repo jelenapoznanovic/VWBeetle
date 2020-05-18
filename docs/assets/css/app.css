@@ -1506,7 +1506,6 @@ a {
         margin-bottom: 70px; } }
 
 .news {
-  padding-top: 35px;
   text-align: center; }
   .news h3 {
     font-weight: normal; }
@@ -1681,6 +1680,15 @@ a {
     padding-left: 170px; }
     .cta__item--large .cta__content {
       margin-left: 115px; } }
+
+.cta__header {
+  padding-top: 50px;
+  text-align: center; }
+  @media screen and (min-width: 768px) {
+    .cta__header {
+      padding-bottom: 30px; } }
+  .cta__header h3 {
+    font-weight: 300; }
 
 /* Slider */
 .slick-loading .slick-list {
