@@ -1608,7 +1608,6 @@ a {
       color: #303033; }
 
 .cta__header {
-  padding-top: 50px;
   text-align: center; }
   @media screen and (min-width: 768px) {
     .cta__header {
@@ -1694,12 +1693,22 @@ a {
     padding-left: 7%; } }
 
 .heading-block {
+<<<<<<< HEAD
   padding-top: 30px;
   text-align: center; }
   @media screen and (min-width: 768px) {
     .heading-block {
       padding-top: 50px;
       padding-bottom: 30px; } }
+=======
+  text-align: center;
+  padding-bottom: 10px;
+  padding-top: 30px; }
+  @media screen and (min-width: 768px) {
+    .heading-block {
+      padding-bottom: 20px;
+      padding-top: 50px; } }
+>>>>>>> feature/cta
   .heading-block h3 {
     font-weight: 300; }
 
