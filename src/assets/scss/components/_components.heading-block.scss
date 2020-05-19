@@ -1,0 +1,13 @@
+.heading-block {
+    padding-top: 50px;
+    text-align: center;
+
+    @include min-screen($breakpoint-mobile) {
+        padding-bottom: 30px;
+    }
+    
+    h3 {
+        font-weight: 300;
+    }
+}
+

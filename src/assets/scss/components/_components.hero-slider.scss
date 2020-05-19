@@ -37,7 +37,7 @@
         counter-reset: slide;
         
         @include min-screen($breakpoint-mobile) {
-            left: 10px;
+            padding-left: 10px;
             text-align: left;
         }
         

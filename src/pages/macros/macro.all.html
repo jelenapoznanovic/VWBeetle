@@ -35,6 +35,24 @@
 </div>
 {% endmacro %}
 
+{% macro ctaItem(classModifier, imageUrl, title, text) %}
+<div class="cta__item {{ classModifier}}">
+	<div class="cta__img">
+		<img src="../assets/img/{{ imageUrl }}" alt="">
+	</div>
+	<div class="cta__content">
+		<h4>{{ title }} <span>{{ text }}</span></h4>
+	</div>
+</div>
+{% endmacro %}
+
+{% macro headingBlock(title, text) %}
+<div class="cta__header">
+    <h2>{{ title }}</h2>
+    <h3 class="h4">{{ text }}</h3>
+</div>
+{% endmacro %}
+
 
 
 

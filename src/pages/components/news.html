@@ -1,0 +1,24 @@
+{% import "../macros/macro.all.html" as allMacros %}
+
+<div class="news">
+
+    {{ allMacros.headingBlock('Latest news', 'new beetle design') }}
+    
+    <div class="grid-container">
+        <div style="background-image: url('assets/img/news-img1-mobile.jpg');" class="news__item news__item--1">
+            <img src="assets/img/news-img1.jpg" alt=""/>
+            <div class="news__item-inner">
+                <h2>Express yourself with <span>VW Beetle</span></h2>
+                <a class="button button--primary button--transparent button--middle" href="">explore</a>
+            </div>
+        </div>
+        <div style="background-image: url('assets/img/news-img2-mobile.jpg');" class="news__item news__item--2">
+            <img src="assets/img/news-img2.jpg" alt=""/>
+            <a class="button button--primary button--transparent button--middle" href="">customize</a>
+        </div>  
+        <div style="background-image: url('assets/img/news-img3-mobile.jpg');" class="news__item news__item--3">
+            <img src="assets/img/news-img3.jpg" alt=""/>
+            <a class="button button--primary button--transparent button--middle" href="">manage</a>
+        </div>
+    </div>
+</div>
