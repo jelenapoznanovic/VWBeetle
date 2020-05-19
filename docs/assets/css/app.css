@@ -1017,7 +1017,7 @@ fieldset {
   margin-bottom: 20px; }
 
 img {
-  min-width: 100%; }
+  max-width: 100%; }
 
 /* ------------------------------------*\
     #HEADINGS
@@ -2032,6 +2032,67 @@ a {
     align-items: center;
     justify-content: center;
     font-size: 14px; }
+
+.shop-slider {
+  position: relative; }
+  .shop-slider .slick-slide {
+    position: relative; }
+  .shop-slider img {
+    z-index: 1;
+    position: relative;
+    width: 100%;
+    height: auto; }
+  .shop-slider .slick-dots {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    counter-reset: slide; }
+    @media screen and (min-width: 768px) {
+      .shop-slider .slick-dots {
+        padding-left: 10px;
+        text-align: left; } }
+    .shop-slider .slick-dots .slick-active button {
+      background-color: #f8dd5a;
+      font-weight: 700; }
+      .shop-slider .slick-dots .slick-active button:hover {
+        background-color: #e2bd0a; }
+      .shop-slider .slick-dots .slick-active button::after {
+        color: #26262a; }
+    .shop-slider .slick-dots li,
+    .shop-slider .slick-dots button {
+      width: 10px;
+      height: 10px; }
+      @media screen and (min-width: 768px) {
+        .shop-slider .slick-dots li,
+        .shop-slider .slick-dots button {
+          width: 50px;
+          height: 50px; } }
+    .shop-slider .slick-dots li {
+      margin: 0 5px; }
+      @media screen and (min-width: 768px) {
+        .shop-slider .slick-dots li {
+          margin: 0 1px; } }
+    .shop-slider .slick-dots button {
+      background-color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color .2s ease; }
+      .shop-slider .slick-dots button:hover {
+        background-color: #e6e6e6; }
+      .shop-slider .slick-dots button::before {
+        display: none; }
+      @media screen and (min-width: 768px) {
+        .shop-slider .slick-dots button {
+          background-color: #26262a; }
+          .shop-slider .slick-dots button:hover {
+            background-color: #323237; }
+          .shop-slider .slick-dots button::after {
+            color: white;
+            counter-increment: slide;
+            content: counter(slide);
+            font-size: 14px; } }
 
 /* ------------------------------------*\
     #TRUMPS - SPACING
