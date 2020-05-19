@@ -1694,10 +1694,11 @@ a {
     padding-left: 7%; } }
 
 .heading-block {
-  padding-top: 50px;
+  padding-top: 30px;
   text-align: center; }
   @media screen and (min-width: 768px) {
     .heading-block {
+      padding-top: 50px;
       padding-bottom: 30px; } }
   .heading-block h3 {
     font-weight: 300; }
