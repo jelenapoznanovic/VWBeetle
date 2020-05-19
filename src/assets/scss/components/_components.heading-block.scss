@@ -1,12 +1,4 @@
 .heading-block {
-<<<<<<< HEAD
-    padding-top: 30px;
-    text-align: center;
-    
-    @include min-screen($breakpoint-mobile) {
-        padding-top: 50px;
-        padding-bottom: 30px;
-=======
     text-align: center;
     padding-bottom: 10px;
     padding-top: 30px;
@@ -14,7 +6,6 @@
     @include min-screen($breakpoint-mobile) {
         padding-bottom: 20px;
         padding-top: 50px;
->>>>>>> feature/cta
     }
     
     h3 {

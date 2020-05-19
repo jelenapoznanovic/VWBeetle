@@ -1505,26 +1505,26 @@ a {
       .discount__input input {
         margin-bottom: 70px; } }
 
-.news {
+.news-section {
   text-align: center; }
-  .news h3 {
+  .news-section h3 {
     font-weight: normal; }
-  .news .grid-container {
+  .news-section .grid-container {
     height: 100%;
     margin: 0; }
   @media screen and (min-width: 768px) {
-    .news .grid-container {
+    .news-section .grid-container {
       display: grid;
       grid-template-columns: minmax(0, 58%) 42%;
       grid-template-rows: 1fr 1fr;
       gap: 0px 0px;
       grid-template-areas: "s a" "s b";
       font-size: 0; }
-      .news .grid-container > div {
+      .news-section .grid-container > div {
         overflow: hidden; } }
-  .news .grid-container * {
+  .news-section .grid-container * {
     position: relative; }
-  .news .grid-container *:after {
+  .news-section .grid-container *:after {
     content: attr("");
     position: absolute;
     top: 0;
@@ -1693,14 +1693,6 @@ a {
     padding-left: 7%; } }
 
 .heading-block {
-<<<<<<< HEAD
-  padding-top: 30px;
-  text-align: center; }
-  @media screen and (min-width: 768px) {
-    .heading-block {
-      padding-top: 50px;
-      padding-bottom: 30px; } }
-=======
   text-align: center;
   padding-bottom: 10px;
   padding-top: 30px; }
@@ -1708,7 +1700,6 @@ a {
     .heading-block {
       padding-bottom: 20px;
       padding-top: 50px; } }
->>>>>>> feature/cta
   .heading-block h3 {
     font-weight: 300; }
 

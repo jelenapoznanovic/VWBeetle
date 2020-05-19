@@ -6,10 +6,6 @@
 
 {% block content %}
 {% include "./components/header.html" -%}
-<div id="best-seller"></div>
-
-<div id="news"></div>
-<div id="discounts"></div>
 
 <section class="hero-section">
     <div class="wrapper wrapper--no-padding-mobile">
@@ -17,7 +13,11 @@
     </div>
 </section>
 
-<section class="news">
+<section id="shop" class="shop-section">
+    {% include "./components/shop.html" -%}
+</section>
+
+<section id="news" class="news-section">
     <div class="wrapper wrapper--no-padding-mobile">
         {% include "./components/news.html" -%}
     </div>
@@ -29,7 +29,7 @@
     </div>
 </section>
 
-<section class="subscribe-section">
+<section id="subscribe" class="subscribe-section">
     <div class="wrapper wrapper--small">
         {% include "./components/subscribe.html" -%}
     </div>
