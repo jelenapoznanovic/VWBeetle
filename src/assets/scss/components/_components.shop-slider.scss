@@ -11,10 +11,10 @@
         width: 100%;
         height: auto;
     }
-    
+
     .slick-dots {
         position: absolute;
-        bottom: 10px;
+        bottom: 30px;
         left: 0;
         right: 0;
         counter-reset: slide;
@@ -92,4 +92,7 @@
     }
 }
 
+.slick-dotted.slick-slider {
+        margin-bottom: 0;
+}
 

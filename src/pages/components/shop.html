@@ -13,25 +13,40 @@
     </div>
 
     <div bp="grid">
-        <div bp="4@lg 12@md">
+        <div bp="4@md 6@sm" class="cart">
             <div class="js-shop-slider shop-slider">
                 <div><img src="assets/img/shop-img1.jpg" alt=""></div>
                 <div><img src="assets/img/shop-img2.jpg" alt=""></div>
                 <div><img src="assets/img/shop-img3.jpg" alt=""></div>
+                <div><img src="assets/img/shop-img1.jpg" alt=""></div>
+                <div><img src="assets/img/shop-img2.jpg" alt=""></div>
+            </div>
+            <div class="cart__buttons">
+                {% include "./add-to-cart.html" -%}
+
+                <div class="cart__buttons-reaction">
+                    {{ allMacros.shopButtons('shop-buttons', 'heart.png') }}
+                    {{ allMacros.shopButtons('shop-buttons', 'compass.png') }}
+                </div>
+            </div>
+
+        </div>
+        <div bp="4@md 6@sm">
+            <div class="js-shop-slider shop-slider">
+                <div><img src="assets/img/shop-img2.jpg" alt=""></div>
+                <div><img src="assets/img/shop-img1.jpg" alt=""></div>
+                <div><img src="assets/img/shop-img3.jpg" alt=""></div>
+                <div><img src="assets/img/shop-img2.jpg" alt=""></div>
+                <div><img src="assets/img/shop-img1.jpg" alt=""></div>
             </div>
         </div>
-        <div bp="4@lg 12@md">
-            <div class="js-shop-slider shop-slider">
-                <div><img src="assets/img/shop-img2.jpg" alt=""></div>
-                <div><img src="assets/img/shop-img1.jpg" alt=""></div>
-                <div><img src="assets/img/shop-img3.jpg" alt=""></div>
-            </div>
-        </div>
-        <div bp="4@lg 12@md">
+        <div bp="4@md 6@sm">
             <div class="js-shop-slider shop-slider">
                 <div><img src="assets/img/shop-img3.jpg" alt=""></div>
                 <div><img src="assets/img/shop-img1.jpg" alt=""></div>
                 <div><img src="assets/img/shop-img2.jpg" alt=""></div>
+                <div><img src="assets/img/shop-img3.jpg" alt=""></div>
+                <div><img src="assets/img/shop-img1.jpg" alt=""></div>
             </div>
         </div>
       </div>

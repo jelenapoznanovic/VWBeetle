@@ -1079,7 +1079,7 @@ $(document).ready(function () {
     adaptiveHeight: true
   });
   $('.js-shop-slider').slick({
-    arrows: false,
+    arrows: true,
     dots: true,
     infinite: true,
     speed: 300,
@@ -1087,8 +1087,8 @@ $(document).ready(function () {
     responsive: [{
       breakpoint: 768,
       settings: {
-        arrows: true,
-        dots: false
+        arrows: false // dots: false,
+
       }
     }]
   });

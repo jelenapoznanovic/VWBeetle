@@ -86,7 +86,7 @@ $(document).ready(() => {
     
     
     $('.js-shop-slider').slick({
-        arrows: false,
+        arrows: true,
         dots: true,
         infinite: true,
         speed: 300,
@@ -95,8 +95,8 @@ $(document).ready(() => {
             {
                 breakpoint: 768,
                 settings: {
-                    arrows: true,
-                    dots: false,
+                    arrows: false,
+                    // dots: false,
               
             }
           }
