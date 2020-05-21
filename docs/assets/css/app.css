@@ -1739,7 +1739,11 @@ a {
   align-items: center;
   justify-content: center;
   display: inline-flex;
-  margin-left: 1px; }
+  margin-left: 1px;
+  transition: background-color .2s ease;
+  cursor: pointer; }
+  .shop-buttons:hover {
+    background-color: #f6d329; }
 
 /* Slider */
 .slick-loading .slick-list {
