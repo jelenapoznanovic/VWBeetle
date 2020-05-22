@@ -1,6 +1,7 @@
 .cart {
     margin-bottom: 20px;
     position: relative;
+    cursor: pointer;
 
     &:hover {
 
@@ -30,6 +31,7 @@
     button {
         font-size: 12px;
         justify-content: left;
+        font-weight: 800;
     }
 
     span {
@@ -39,9 +41,12 @@
 
 .cart__buttons-reaction {
     display: flex;
-    visibility: hidden;
-    opacity: 0;
     transition: opacity .2s ease;
+    
+    @include min-screen($breakpoint-mobile) {
+        opacity: 0;
+        visibility: hidden;
+    }
 }
 
 .shop-buttons {

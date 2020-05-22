@@ -1712,7 +1712,8 @@ a {
 
 .cart {
   margin-bottom: 20px;
-  position: relative; }
+  position: relative;
+  cursor: pointer; }
   .cart:hover .cart__buttons-reaction,
   .cart:hover .slick-arrow {
     visibility: visible;
@@ -1733,15 +1734,18 @@ a {
       padding: 0; } }
   .cart__buttons button {
     font-size: 12px;
-    justify-content: left; }
+    justify-content: left;
+    font-weight: 800; }
   .cart__buttons span {
     padding-left: 20px; }
 
 .cart__buttons-reaction {
   display: flex;
-  visibility: hidden;
-  opacity: 0;
   transition: opacity .2s ease; }
+  @media screen and (min-width: 768px) {
+    .cart__buttons-reaction {
+      opacity: 0;
+      visibility: hidden; } }
 
 .shop-buttons {
   width: 50px;
