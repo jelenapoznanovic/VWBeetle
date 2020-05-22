@@ -35,6 +35,7 @@
 </div>
 {% endmacro %}
 
+
 {% macro ctaItem(classModifier, imageUrl, title, text) %}
 <div class="cta__item {{ classModifier}}">
 	<div class="cta__img">
@@ -46,6 +47,7 @@
 </div>
 {% endmacro %}
 
+
 {% macro headingBlock(title, text) %}
 <div class="heading-block">
     <h2>{{ title }}</h2>
@@ -53,9 +55,18 @@
 </div>
 {% endmacro %}
 
+
 {% macro shopButtons(classModifier, image) %}
 <div class="{{ classModifier }}">
     <img src="assets/img/{{ image }}" alt="">
+</div>
+{% endmacro %}
+
+
+{% macro shopOffers(classModifier, image, title) %}
+<div class="{{ classModifier }}">
+	<img src="assets/img/{{ image }}" alt="">
+	<h5>{{ title }}</h5>
 </div>
 {% endmacro %}
 

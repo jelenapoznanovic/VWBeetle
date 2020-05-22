@@ -47,3 +47,32 @@
       background-color: darken($color-yellow, 10%);
     }
 }
+
+.cart__buttons-offer {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    > div {
+        width: 40px;
+        height: 40px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    h5 {
+        color: white;
+        font-weight: 300;
+        margin-bottom: 0;
+    }
+}
+
+.cart__price {
+    color: white;
+    font-weight: 800;
+    font-size: 12px;
+    margin-left: 10px;
+}
