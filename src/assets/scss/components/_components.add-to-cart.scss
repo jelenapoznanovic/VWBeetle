@@ -1,6 +1,15 @@
 .cart {
     margin-bottom: 20px;
     position: relative;
+
+    &:hover {
+
+        .cart__buttons-reaction,
+        .slick-arrow {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
 }
 
 .cart__buttons {
@@ -30,6 +39,9 @@
 
 .cart__buttons-reaction {
     display: flex;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .2s ease;
 }
 
 .shop-buttons {

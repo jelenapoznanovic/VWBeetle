@@ -1713,6 +1713,10 @@ a {
 .cart {
   margin-bottom: 20px;
   position: relative; }
+  .cart:hover .cart__buttons-reaction,
+  .cart:hover .slick-arrow {
+    visibility: visible;
+    opacity: 1; }
 
 .cart__buttons {
   display: flex;
@@ -1734,7 +1738,10 @@ a {
     padding-left: 20px; }
 
 .cart__buttons-reaction {
-  display: flex; }
+  display: flex;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .2s ease; }
 
 .shop-buttons {
   width: 50px;
@@ -2164,17 +2171,23 @@ a {
             counter-increment: slide;
             content: counter(slide);
             font-size: 14px; } }
-  @media screen and (min-width: 768px) {
-    .shop-slider .slick-arrow {
-      width: 50px;
-      height: 50px;
-      background-color: #303033;
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      transform: translate(0, 0);
-      z-index: 5;
-      top: auto; } }
+  .shop-slider .slick-arrow {
+    visibility: hidden;
+    opacity: 0; }
+    @media screen and (min-width: 768px) {
+      .shop-slider .slick-arrow {
+        transition: opacity .4s ease;
+        width: 50px;
+        height: 50px;
+        background-color: #303033;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        transform: translate(0, 0);
+        z-index: 5;
+        top: auto; }
+        .shop-slider .slick-arrow:hover {
+          background-color: #49494d; } }
   .shop-slider .slick-prev {
     left: auto;
     right: 51px;
