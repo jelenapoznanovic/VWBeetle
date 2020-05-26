@@ -1555,7 +1555,8 @@ a {
     .news__item {
       padding-bottom: 0; } }
   .news__item img {
-    display: none; }
+    display: none;
+    height: 100%; }
     @media screen and (min-width: 768px) {
       .news__item img {
         display: block; } }
