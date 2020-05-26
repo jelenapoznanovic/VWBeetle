@@ -8,7 +8,8 @@ $(document).ready(() => {
     
 	// ACTIVATE HEADER LINKS ON SCROLL
 	var lastId,
-	topMenu = $(".header-main__navigation"),
+    topMenu = $(".header-main__navigation"),
+    header = $('.header-main'),
 	topMenuHeight = topMenu.outerHeight()+200,
     // All list items
     menuItems = topMenu.find("a"),
@@ -42,7 +43,7 @@ $(document).ready(() => {
     // END ACTIVATE HEADER LINKS ON SCROLL
     
 	// VARIABLES
-	const header_height = $('.header-main').outerHeight();
+	const header_height = header.outerHeight();
 	// END VARIABLES
 	// SCROLL PAGE FOR ALL TARGET LINKS (SMOOTH SCROLL)
 	$('.header-main__navigation a').smoothScroll({
@@ -70,7 +71,11 @@ $(document).ready(() => {
     
     //SHOW NAV ON HAMBURGER CLICK
     $('.header-main__hamburger').on('click', function() {
-        $('.header-main').toggleClass('show-nav')
+        header.toggleClass('show-nav')
+    })
+
+    $('.header-main__navigation a').on('click', function() {
+        header.removeClass('show-nav')
     })
 
     // SLICK SLIDER
