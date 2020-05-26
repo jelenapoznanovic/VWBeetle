@@ -1217,14 +1217,14 @@ a {
         margin-right: 25px;
         margin-left: 25px; }
         .header-main__navigation li.is-active a {
-          color: #303033;
-          padding-left: 15px; }
+          color: #303033; }
           .header-main__navigation li.is-active a:before {
             display: block;
             border-color: yellow; }
         .header-main__navigation li a {
           color: #8e9298;
-          padding: 0; }
+          padding: 0;
+          padding-left: 15px; }
           .header-main__navigation li a:before {
             display: none; } }
 

@@ -147,18 +147,18 @@
       
         a {
           color: $color-dark;
-          padding-left: 15px;
-  
+          
           &:before {
             display: block;
             border-color: yellow;
           }
         }
       }
-        
+      
       a {
-          color: $color-gray-light;
-          padding: 0;
+        color: $color-gray-light;
+        padding: 0;
+        padding-left: 15px;
 
           &:before {
             display: none;
